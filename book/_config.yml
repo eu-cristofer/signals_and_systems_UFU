@@ -1,0 +1,85 @@
+# Configuration file for the Jupyter Book
+title: Signals and Systems - UFU
+author: Universidade Federal de Uberlândia
+logo: https://myst-parser.readthedocs.io/en/latest/_static/logo-wide.svg
+
+# Force re-execution of notebooks on each build
+execute:
+  execute_notebooks: force
+
+# Specify the kernels to use for different languages
+kernelspec:
+  default: python3
+
+# Book settings
+html:
+  favicon: https://myst-parser.readthedocs.io/en/latest/_static/logo-wide.svg
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: true
+  repository_url: https://github.com/cristofer/signals_and_systems_UFU
+  repository_branch: main
+  path_to_docs: book
+
+# LaTeX settings
+latex:
+  latex_engine: pdflatex
+  latex_documents:
+    targetname: book.tex
+
+# Bibliography
+bibtex_bibfiles:
+  - references.bib
+
+# Sphinx settings
+sphinx:
+  config:
+    # Enable MyST extensions
+    extensions:
+      - myst_nb
+      - sphinx_copybutton
+      - sphinx_panels
+      - sphinx_thebe
+      - sphinx_togglebutton
+      - sphinxcontrib.bibtex
+      - jupyter_book
+      - sphinx.ext.intersphinx
+      - sphinx.ext.autodoc
+      - sphinx.ext.viewcode
+      - sphinx.ext.napoleon
+      - sphinx.ext.mathjax
+      - sphinx.ext.githubpages
+
+    # MyST configuration
+    myst_enable_extensions:
+      - colon_fence
+      - deflist
+      - html_admonition
+      - html_image
+      - linkify
+      - replacements
+      - smartquotes
+      - substitution
+      - tasklist
+
+    # Math settings
+    mathjax_path: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML
+    mathjax3_config:
+      tex:
+        inlineMath: [["\\(", "\\)"]]
+        displayMath: [["\\[", "\\]"]]
+
+    # Theme settings
+    html_theme_options:
+      search_bar_text: "Search this book..."
+      navbar_footer_text: "Built with Jupyter Book"
+      extra_navbar: "<p>Your HTML</p>"
+      extra_footer: "<p>Your HTML</p>"
+      google_analytics_id: ""
+      baseurl: ""
+      repository_url: "https://github.com/cristofer/signals_and_systems_UFU"
+      repository_branch: "main"
+      path_to_docs: "book"
+      use_edit_page_button: true
+      use_repository_button: true
+      use_issues_button: true

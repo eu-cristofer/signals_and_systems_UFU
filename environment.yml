@@ -1,0 +1,30 @@
+# File: environment.yml
+name: signals
+channels:
+  - conda-forge
+dependencies:
+  # Core scientific and Jupyter packages
+  - python=3.12
+  - ipykernel
+  - ipython
+  - jupyter
+  - matplotlib
+  - nb_conda_kernels
+  - nbconvert
+  - numpy
+  - pandas
+  - pint
+  - plotly
+  - scipy
+  - xlrd
+
+  # Development dependencies
+  - pytest
+
+  # Pip for packages not on conda-forge or for specific versions
+  - pip
+  - pip:
+      - jupyter-book
+      - ghp-import      # For publishing to GitHub Pages
+      - jupyter-cache   # For caching notebooks to speed up builds
+      - sphinx-thebe    # For making code cells interactive
