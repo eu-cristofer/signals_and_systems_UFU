@@ -8,7 +8,6 @@ on:
   push:
     branches:
       # It will run automatically every time you 'git push' to the 'main' branch.
-      # If your default branch is 'master', you should change 'main' to 'master'.
       - main
 
 # --------------------------------------------------------------------------
@@ -18,12 +17,9 @@ jobs:
   # We have a single job named 'deploy-book'.
   deploy-book:
     # This specifies the type of virtual machine (runner) to run the job on.
-    # 'ubuntu-latest' is a standard, reliable choice for most Python projects.
     runs-on: ubuntu-latest
     
     # This sets a default shell for all 'run' steps in this job.
-    # 'bash -l {0}' is crucial for Conda. The '-l' flag makes the shell a "login shell",
-    # which is required to properly source and activate the Conda environment.
     defaults:
       run:
         shell: bash -l {0}
@@ -33,15 +29,10 @@ jobs:
     # ----------------------------------------------------------------------
     steps:
       # Step 1: Check out your repository's code onto the runner.
-      # The 'uses' keyword tells the job to run a pre-built "action".
-      # 'actions/checkout@v4' is a standard action that gives the workflow
-      # access to your project files (like environment.yml and your book's content).
       - name: Checkout repository
         uses: actions/checkout@v4
 
       # Step 2: Set up a Conda environment.
-      # This action installs Miniconda and then creates/activates the environment
-      # defined in your 'environment.yml' file, ensuring a perfect match.
       - name: Set up Miniconda
         uses: conda-incubator/setup-miniconda@v3
         with:
@@ -53,15 +44,12 @@ jobs:
           environment-file: environment.yml
 
       # Step 3: Build the Jupyter Book.
-      # The 'run' keyword executes shell commands. This command runs inside the
-      # activated Conda environment from the previous step.
       - name: Build the book
         run: |
+          cd book
           jupyter-book build .
 
       # Step 4: Deploy the built book to GitHub Pages.
-      # This action takes the generated HTML files and pushes them to a special
-      # 'gh-pages' branch, which is then served as your website.
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -71,4 +59,4 @@ jobs:
           
           # This specifies the directory containing the built website (_build/html)
           # that should be deployed.
-          publish_dir: ./_build/html
+          publish_dir: ./book/_build/html

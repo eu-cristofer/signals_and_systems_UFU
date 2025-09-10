@@ -17,7 +17,7 @@ html:
   use_issues_button: true
   use_repository_button: true
   use_edit_page_button: true
-  repository_url: https://github.com/cristofer/signals_and_systems_UFU
+  repository_url: https://github.com/eu-cristofer/signals_and_systems_UFU
   repository_branch: main
   path_to_docs: book
 
@@ -77,7 +77,7 @@ sphinx:
       extra_footer: "<p>Your HTML</p>"
       google_analytics_id: ""
       baseurl: ""
-      repository_url: "https://github.com/cristofer/signals_and_systems_UFU"
+      repository_url: "https://github.com/eu-cristofer/signals_and_systems_UFU"
       repository_branch: "main"
       path_to_docs: "book"
       use_edit_page_button: true
