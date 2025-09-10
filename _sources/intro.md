@@ -21,7 +21,7 @@ This course covers the mathematical foundations and practical applications of si
 
 ## Learning Objectives
 
-By the end of this course, you should be able to:
+By the end of this course, you should be able to??:
 
 1. **Classify signals and systems** according to their properties
 2. **Analyze linear time-invariant (LTI) systems** using various mathematical tools
