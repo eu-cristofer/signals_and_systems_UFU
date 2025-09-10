@@ -1,0 +1,593 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Glossary &#8212; Signals and Systems - UFU</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'appendices/glossary';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Signals and Systems - UFU</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Signals and Systems
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/appendices/glossary.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Glossary</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a">A</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b">B</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c">C</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d">D</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#e">E</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f">F</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#g">G</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#h">H</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i">I</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#l">L</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m">M</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#n">N</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o">O</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#p">P</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#q">Q</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r">R</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#s">S</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#t">T</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#u">U</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#w">W</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#z">Z</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="glossary">
+<h1>Glossary<a class="headerlink" href="#glossary" title="Link to this heading">#</a></h1>
+<p>This glossary defines key terms used throughout the Signals and Systems course.</p>
+<section id="a">
+<h2>A<a class="headerlink" href="#a" title="Link to this heading">#</a></h2>
+<p><strong>Aliasing</strong> - A phenomenon that occurs when a signal is sampled at a rate lower than twice its highest frequency component, causing high-frequency components to appear as lower frequencies.</p>
+<p><strong>Amplitude</strong> - The magnitude or strength of a signal at any given time.</p>
+<p><strong>Analog Signal</strong> - A continuous signal that can take on any value within a continuous range.</p>
+<p><strong>Aperiodic Signal</strong> - A signal that does not repeat itself over time.</p>
+<p><strong>Autocorrelation</strong> - A measure of similarity between a signal and a time-shifted version of itself.</p>
+</section>
+<section id="b">
+<h2>B<a class="headerlink" href="#b" title="Link to this heading">#</a></h2>
+<p><strong>Bandwidth</strong> - The range of frequencies over which a signal or system operates effectively.</p>
+<p><strong>BIBO Stability</strong> - Bounded Input, Bounded Output stability; a system is BIBO stable if every bounded input produces a bounded output.</p>
+<p><strong>Butterworth Filter</strong> - A type of filter with a maximally flat frequency response in the passband.</p>
+</section>
+<section id="c">
+<h2>C<a class="headerlink" href="#c" title="Link to this heading">#</a></h2>
+<p><strong>Causal System</strong> - A system whose output at any time depends only on the input at the present and past times, not on future inputs.</p>
+<p><strong>Chebyshev Filter</strong> - A type of filter with equiripple behavior in either the passband or stopband.</p>
+<p><strong>Circular Convolution</strong> - Convolution performed in the frequency domain using the DFT, which assumes periodic extension of signals.</p>
+<p><strong>Continuous-Time Signal</strong> - A signal defined for all values of time in a continuous interval.</p>
+<p><strong>Convolution</strong> - A mathematical operation that describes how the shape of one function is modified by another function.</p>
+<p><strong>Cutoff Frequency</strong> - The frequency at which a filter’s response drops to a specified level (typically -3 dB).</p>
+</section>
+<section id="d">
+<h2>D<a class="headerlink" href="#d" title="Link to this heading">#</a></h2>
+<p><strong>Decimation</strong> - The process of reducing the sampling rate of a signal by an integer factor.</p>
+<p><strong>Digital Signal</strong> - A discrete signal that can take on only a finite number of values.</p>
+<p><strong>Discrete-Time Signal</strong> - A signal defined only at discrete time instants.</p>
+<p><strong>Discrete Fourier Transform (DFT)</strong> - A transform that converts a finite sequence of equally-spaced samples into a sequence of complex numbers representing the frequency domain.</p>
+<p><strong>Discrete-Time Fourier Transform (DTFT)</strong> - The Fourier transform of a discrete-time signal.</p>
+</section>
+<section id="e">
+<h2>E<a class="headerlink" href="#e" title="Link to this heading">#</a></h2>
+<p><strong>Energy Signal</strong> - A signal with finite energy and zero average power.</p>
+<p><strong>Even Signal</strong> - A signal that satisfies x(t) = x(-t) for all t.</p>
+<p><strong>Exponential Signal</strong> - A signal of the form x(t) = Ae^(st) where A and s are complex constants.</p>
+</section>
+<section id="f">
+<h2>F<a class="headerlink" href="#f" title="Link to this heading">#</a></h2>
+<p><strong>Fast Fourier Transform (FFT)</strong> - An efficient algorithm for computing the DFT.</p>
+<p><strong>Filter</strong> - A system that selectively passes or blocks certain frequency components of a signal.</p>
+<p><strong>Fourier Series</strong> - A representation of a periodic signal as a sum of sinusoidal components.</p>
+<p><strong>Fourier Transform</strong> - A transform that converts a time-domain signal into its frequency-domain representation.</p>
+<p><strong>Frequency</strong> - The number of cycles per unit time, measured in Hertz (Hz).</p>
+<p><strong>Frequency Response</strong> - The response of a system to sinusoidal inputs of different frequencies.</p>
+</section>
+<section id="g">
+<h2>G<a class="headerlink" href="#g" title="Link to this heading">#</a></h2>
+<p><strong>Group Delay</strong> - The negative derivative of the phase response with respect to frequency.</p>
+</section>
+<section id="h">
+<h2>H<a class="headerlink" href="#h" title="Link to this heading">#</a></h2>
+<p><strong>Harmonic</strong> - A frequency component that is an integer multiple of the fundamental frequency.</p>
+<p><strong>High-pass Filter</strong> - A filter that passes high frequencies and attenuates low frequencies.</p>
+<p><strong>Homogeneous Solution</strong> - The solution to a differential equation when the input is zero.</p>
+</section>
+<section id="i">
+<h2>I<a class="headerlink" href="#i" title="Link to this heading">#</a></h2>
+<p><strong>Impulse Response</strong> - The output of a system when the input is a unit impulse function.</p>
+<p><strong>Interpolation</strong> - The process of increasing the sampling rate of a signal.</p>
+<p><strong>Inverse Fourier Transform</strong> - The transform that converts a frequency-domain signal back to the time domain.</p>
+<p><strong>Inverse Laplace Transform</strong> - The transform that converts a Laplace-domain signal back to the time domain.</p>
+<p><strong>Inverse Z-Transform</strong> - The transform that converts a Z-domain signal back to the time domain.</p>
+</section>
+<section id="l">
+<h2>L<a class="headerlink" href="#l" title="Link to this heading">#</a></h2>
+<p><strong>Laplace Transform</strong> - A transform used for analyzing continuous-time systems, converting time-domain functions to the s-domain.</p>
+<p><strong>Linear System</strong> - A system that satisfies the principle of superposition.</p>
+<p><strong>Linear Time-Invariant (LTI) System</strong> - A system that is both linear and time-invariant.</p>
+<p><strong>Low-pass Filter</strong> - A filter that passes low frequencies and attenuates high frequencies.</p>
+</section>
+<section id="m">
+<h2>M<a class="headerlink" href="#m" title="Link to this heading">#</a></h2>
+<p><strong>Magnitude Response</strong> - The absolute value of the frequency response of a system.</p>
+<p><strong>Memoryless System</strong> - A system whose output at any time depends only on the input at that same time.</p>
+<p><strong>Modulation</strong> - The process of varying a carrier signal with an information signal.</p>
+</section>
+<section id="n">
+<h2>N<a class="headerlink" href="#n" title="Link to this heading">#</a></h2>
+<p><strong>Nyquist Frequency</strong> - Half the sampling frequency; the highest frequency that can be accurately represented in a sampled signal.</p>
+<p><strong>Nyquist Rate</strong> - The minimum sampling rate required to avoid aliasing, equal to twice the highest frequency component.</p>
+</section>
+<section id="o">
+<h2>O<a class="headerlink" href="#o" title="Link to this heading">#</a></h2>
+<p><strong>Odd Signal</strong> - A signal that satisfies x(t) = -x(-t) for all t.</p>
+<p><strong>Orthogonal</strong> - Two signals are orthogonal if their inner product is zero.</p>
+</section>
+<section id="p">
+<h2>P<a class="headerlink" href="#p" title="Link to this heading">#</a></h2>
+<p><strong>Parseval’s Theorem</strong> - A theorem relating the energy in the time domain to the energy in the frequency domain.</p>
+<p><strong>Passband</strong> - The range of frequencies that a filter passes with minimal attenuation.</p>
+<p><strong>Period</strong> - The smallest positive value T for which a periodic signal repeats itself.</p>
+<p><strong>Periodic Signal</strong> - A signal that repeats itself after a fixed time interval.</p>
+<p><strong>Phase</strong> - The angular displacement of a sinusoidal signal relative to a reference.</p>
+<p><strong>Phase Response</strong> - The phase of the frequency response of a system.</p>
+<p><strong>Power Signal</strong> - A signal with finite average power and infinite energy.</p>
+<p><strong>Pulse Width Modulation (PWM)</strong> - A modulation technique where the width of pulses is varied to encode information.</p>
+</section>
+<section id="q">
+<h2>Q<a class="headerlink" href="#q" title="Link to this heading">#</a></h2>
+<p><strong>Quality Factor (Q)</strong> - A measure of the sharpness of a resonant peak in a filter or system.</p>
+</section>
+<section id="r">
+<h2>R<a class="headerlink" href="#r" title="Link to this heading">#</a></h2>
+<p><strong>Reconstruction</strong> - The process of recovering a continuous-time signal from its samples.</p>
+<p><strong>Region of Convergence (ROC)</strong> - The set of values for which a transform converges.</p>
+<p><strong>Resonance</strong> - The tendency of a system to oscillate at a particular frequency.</p>
+</section>
+<section id="s">
+<h2>S<a class="headerlink" href="#s" title="Link to this heading">#</a></h2>
+<p><strong>Sampling</strong> - The process of converting a continuous-time signal to a discrete-time signal.</p>
+<p><strong>Sampling Theorem</strong> - A theorem stating that a signal can be perfectly reconstructed from its samples if the sampling rate is at least twice the highest frequency component.</p>
+<p><strong>Signal</strong> - A function that carries information about a physical phenomenon.</p>
+<p><strong>Sinc Function</strong> - The function sinc(x) = sin(πx)/(πx).</p>
+<p><strong>Spectral Density</strong> - A measure of the power or energy per unit frequency.</p>
+<p><strong>Stability</strong> - A property of a system indicating whether it produces bounded outputs for bounded inputs.</p>
+<p><strong>Stopband</strong> - The range of frequencies that a filter attenuates significantly.</p>
+<p><strong>Superposition</strong> - The principle that the response of a linear system to a sum of inputs is the sum of the responses to each input individually.</p>
+<p><strong>System</strong> - A physical device or algorithm that operates on an input signal to produce an output signal.</p>
+</section>
+<section id="t">
+<h2>T<a class="headerlink" href="#t" title="Link to this heading">#</a></h2>
+<p><strong>Time Constant</strong> - A parameter characterizing the exponential decay or rise time of a system.</p>
+<p><strong>Time Invariance</strong> - A property of a system where a time shift in the input results in the same time shift in the output.</p>
+<p><strong>Transfer Function</strong> - The ratio of the Laplace transform of the output to the Laplace transform of the input.</p>
+<p><strong>Transient Response</strong> - The temporary response of a system before it reaches steady state.</p>
+</section>
+<section id="u">
+<h2>U<a class="headerlink" href="#u" title="Link to this heading">#</a></h2>
+<p><strong>Unit Impulse</strong> - A signal with infinite amplitude at t=0 and zero elsewhere, with unit area.</p>
+<p><strong>Unit Step</strong> - A signal that is zero for t&lt;0 and one for t≥0.</p>
+</section>
+<section id="w">
+<h2>W<a class="headerlink" href="#w" title="Link to this heading">#</a></h2>
+<p><strong>Windowing</strong> - The process of multiplying a signal by a window function to reduce spectral leakage.</p>
+</section>
+<section id="z">
+<h2>Z<a class="headerlink" href="#z" title="Link to this heading">#</a></h2>
+<p><strong>Z-Transform</strong> - A transform used for analyzing discrete-time systems, converting time-domain sequences to the z-domain.</p>
+<p><strong>Zero</strong> - A value of z for which the transfer function becomes zero.</p>
+<p><strong>Zero-Order Hold</strong> - A reconstruction method that holds the sample value constant until the next sample.</p>
+<hr class="docutils" />
+<p><em>This glossary is continuously updated as new terms are introduced throughout the course.</em></p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a">A</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b">B</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c">C</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d">D</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#e">E</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f">F</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#g">G</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#h">H</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i">I</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#l">L</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m">M</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#n">N</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o">O</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#p">P</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#q">Q</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r">R</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#s">S</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#t">T</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#u">U</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#w">W</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#z">Z</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Universidade Federal de Uberlândia
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

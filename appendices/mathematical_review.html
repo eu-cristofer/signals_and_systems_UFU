@@ -1,0 +1,689 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Mathematical Review &#8212; Signals and Systems - UFU</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'appendices/mathematical_review';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Signals and Systems - UFU</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Signals and Systems
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/appendices/mathematical_review.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Mathematical Review</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-numbers">Complex Numbers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polar-form">Polar Form</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euler-s-formula">Euler’s Formula</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties">Properties</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculus">Calculus</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives">Derivatives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrals">Integrals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definite-integrals">Definite Integrals</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra">Linear Algebra</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors">Vectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices">Matrices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvalues-and-eigenvectors">Eigenvalues and Eigenvectors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#series-and-summations">Series and Summations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-series">Geometric Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-series">Arithmetic Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-identities">Trigonometric Identities</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differential-equations">Differential Equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-linear">First-Order Linear</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-linear">Second-Order Linear</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fourier-series">Fourier Series</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-form">Trigonometric Form</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential-form">Exponential Form</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coefficients">Coefficients</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-and-statistics">Probability and Statistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-and-variance">Mean and Variance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-distribution">Gaussian Distribution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-approximations">Useful Approximations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#small-angle-approximation">Small Angle Approximation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-series">Taylor Series</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-examples">Interactive Examples</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="mathematical-review">
+<h1>Mathematical Review<a class="headerlink" href="#mathematical-review" title="Link to this heading">#</a></h1>
+<p>This appendix provides a review of essential mathematical concepts used throughout the signals and systems course.</p>
+<section id="complex-numbers">
+<h2>Complex Numbers<a class="headerlink" href="#complex-numbers" title="Link to this heading">#</a></h2>
+<section id="definition">
+<h3>Definition<a class="headerlink" href="#definition" title="Link to this heading">#</a></h3>
+<p>A complex number $z$ can be written in rectangular form as:</p>
+<div class="math notranslate nohighlight">
+\[z = x + jy\]</div>
+<p>where $x$ is the real part, $y$ is the imaginary part, and $j = \sqrt{-1}$.</p>
+</section>
+<section id="polar-form">
+<h3>Polar Form<a class="headerlink" href="#polar-form" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[z = r e^{j\theta} = r(\cos\theta + j\sin\theta)\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p>$r = |z| = \sqrt{x^2 + y^2}$ (magnitude)</p></li>
+<li><p>$\theta = \angle z = \arctan(y/x)$ (phase)</p></li>
+</ul>
+</section>
+<section id="euler-s-formula">
+<h3>Euler’s Formula<a class="headerlink" href="#euler-s-formula" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[e^{j\theta} = \cos\theta + j\sin\theta\]</div>
+</section>
+<section id="properties">
+<h3>Properties<a class="headerlink" href="#properties" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>$|z_1 z_2| = |z_1| |z_2|$</p></li>
+<li><p>$\angle(z_1 z_2) = \angle z_1 + \angle z_2$</p></li>
+<li><p>$z^* = x - jy$ (complex conjugate)</p></li>
+<li><p>$|z|^2 = z z^*$</p></li>
+</ul>
+</section>
+</section>
+<section id="calculus">
+<h2>Calculus<a class="headerlink" href="#calculus" title="Link to this heading">#</a></h2>
+<section id="derivatives">
+<h3>Derivatives<a class="headerlink" href="#derivatives" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>$\frac{d}{dt}[e^{at}] = ae^{at}$</p></li>
+<li><p>$\frac{d}{dt}[\sin(\omega t)] = \omega\cos(\omega t)$</p></li>
+<li><p>$\frac{d}{dt}[\cos(\omega t)] = -\omega\sin(\omega t)$</p></li>
+<li><p>Product rule: $\frac{d}{dt}[f(t)g(t)] = f’(t)g(t) + f(t)g’(t)$</p></li>
+<li><p>Chain rule: $\frac{d}{dt}[f(g(t))] = f’(g(t))g’(t)$</p></li>
+</ul>
+</section>
+<section id="integrals">
+<h3>Integrals<a class="headerlink" href="#integrals" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>$\int e^{at} dt = \frac{1}{a}e^{at} + C$</p></li>
+<li><p>$\int \sin(\omega t) dt = -\frac{1}{\omega}\cos(\omega t) + C$</p></li>
+<li><p>$\int \cos(\omega t) dt = \frac{1}{\omega}\sin(\omega t) + C$</p></li>
+<li><p>Integration by parts: $\int u dv = uv - \int v du$</p></li>
+</ul>
+</section>
+<section id="definite-integrals">
+<h3>Definite Integrals<a class="headerlink" href="#definite-integrals" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>$\int_0^{\infty} e^{-at} dt = \frac{1}{a}$ (for $a &gt; 0$)</p></li>
+<li><p>$\int_{-\infty}^{\infty} e^{-t^2} dt = \sqrt{\pi}$</p></li>
+</ul>
+</section>
+</section>
+<section id="linear-algebra">
+<h2>Linear Algebra<a class="headerlink" href="#linear-algebra" title="Link to this heading">#</a></h2>
+<section id="vectors">
+<h3>Vectors<a class="headerlink" href="#vectors" title="Link to this heading">#</a></h3>
+<p>A vector $\mathbf{v} = [v_1, v_2, \ldots, v_n]^T$ has:</p>
+<ul class="simple">
+<li><p><strong>Norm</strong>: $||\mathbf{v}|| = \sqrt{v_1^2 + v_2^2 + \cdots + v_n^2}$</p></li>
+<li><p><strong>Dot product</strong>: $\mathbf{u} \cdot \mathbf{v} = \sum_{i=1}^n u_i v_i$</p></li>
+</ul>
+</section>
+<section id="matrices">
+<h3>Matrices<a class="headerlink" href="#matrices" title="Link to this heading">#</a></h3>
+<p>For matrix $\mathbf{A} = [a_{ij}]$:</p>
+<ul class="simple">
+<li><p><strong>Transpose</strong>: $\mathbf{A}^T = [a_{ji}]$</p></li>
+<li><p><strong>Determinant</strong>: For 2×2: $\det(\mathbf{A}) = a_{11}a_{22} - a_{12}a_{21}$</p></li>
+<li><p><strong>Inverse</strong>: $\mathbf{A}^{-1} = \frac{1}{\det(\mathbf{A})}\begin{bmatrix} a_{22} &amp; -a_{12} \ -a_{21} &amp; a_{11} \end{bmatrix}$</p></li>
+</ul>
+</section>
+<section id="eigenvalues-and-eigenvectors">
+<h3>Eigenvalues and Eigenvectors<a class="headerlink" href="#eigenvalues-and-eigenvectors" title="Link to this heading">#</a></h3>
+<p>For matrix $\mathbf{A}$, eigenvalues $\lambda$ satisfy:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{A}\mathbf{v} = \lambda\mathbf{v}\]</div>
+<p>where $\mathbf{v}$ is the corresponding eigenvector.</p>
+</section>
+</section>
+<section id="series-and-summations">
+<h2>Series and Summations<a class="headerlink" href="#series-and-summations" title="Link to this heading">#</a></h2>
+<section id="geometric-series">
+<h3>Geometric Series<a class="headerlink" href="#geometric-series" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\sum_{n=0}^{N-1} r^n = \frac{1-r^N}{1-r} \quad \text{for } r \neq 1\]</div>
+<div class="math notranslate nohighlight">
+\[\sum_{n=0}^{\infty} r^n = \frac{1}{1-r} \quad \text{for } |r| &lt; 1\]</div>
+</section>
+<section id="arithmetic-series">
+<h3>Arithmetic Series<a class="headerlink" href="#arithmetic-series" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\sum_{n=1}^N n = \frac{N(N+1)}{2}\]</div>
+</section>
+<section id="trigonometric-identities">
+<h3>Trigonometric Identities<a class="headerlink" href="#trigonometric-identities" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>$\sin^2\theta + \cos^2\theta = 1$</p></li>
+<li><p>$\sin(A \pm B) = \sin A \cos B \pm \cos A \sin B$</p></li>
+<li><p>$\cos(A \pm B) = \cos A \cos B \mp \sin A \sin B$</p></li>
+<li><p>$\sin A \sin B = \frac{1}{2}[\cos(A-B) - \cos(A+B)]$</p></li>
+<li><p>$\cos A \cos B = \frac{1}{2}[\cos(A-B) + \cos(A+B)]$</p></li>
+</ul>
+</section>
+</section>
+<section id="differential-equations">
+<h2>Differential Equations<a class="headerlink" href="#differential-equations" title="Link to this heading">#</a></h2>
+<section id="first-order-linear">
+<h3>First-Order Linear<a class="headerlink" href="#first-order-linear" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\frac{dy}{dt} + ay = x(t)\]</div>
+<p>Solution: $y(t) = e^{-at}\int e^{at}x(t)dt + Ce^{-at}$</p>
+</section>
+<section id="second-order-linear">
+<h3>Second-Order Linear<a class="headerlink" href="#second-order-linear" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\frac{d^2y}{dt^2} + a\frac{dy}{dt} + by = x(t)\]</div>
+<p>Characteristic equation: $s^2 + as + b = 0$</p>
+</section>
+</section>
+<section id="fourier-series">
+<h2>Fourier Series<a class="headerlink" href="#fourier-series" title="Link to this heading">#</a></h2>
+<section id="trigonometric-form">
+<h3>Trigonometric Form<a class="headerlink" href="#trigonometric-form" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[f(t) = a_0 + \sum_{n=1}^{\infty} [a_n\cos(n\omega_0 t) + b_n\sin(n\omega_0 t)]\]</div>
+</section>
+<section id="exponential-form">
+<h3>Exponential Form<a class="headerlink" href="#exponential-form" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[f(t) = \sum_{n=-\infty}^{\infty} c_n e^{jn\omega_0 t}\]</div>
+</section>
+<section id="coefficients">
+<h3>Coefficients<a class="headerlink" href="#coefficients" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[c_n = \frac{1}{T} \int_{-T/2}^{T/2} f(t) e^{-jn\omega_0 t} dt\]</div>
+</section>
+</section>
+<section id="probability-and-statistics">
+<h2>Probability and Statistics<a class="headerlink" href="#probability-and-statistics" title="Link to this heading">#</a></h2>
+<section id="mean-and-variance">
+<h3>Mean and Variance<a class="headerlink" href="#mean-and-variance" title="Link to this heading">#</a></h3>
+<p>For random variable $X$:</p>
+<ul class="simple">
+<li><p><strong>Mean</strong>: $\mu = E[X]$</p></li>
+<li><p><strong>Variance</strong>: $\sigma^2 = E[(X-\mu)^2] = E[X^2] - \mu^2$</p></li>
+</ul>
+</section>
+<section id="gaussian-distribution">
+<h3>Gaussian Distribution<a class="headerlink" href="#gaussian-distribution" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}\]</div>
+</section>
+</section>
+<section id="useful-approximations">
+<h2>Useful Approximations<a class="headerlink" href="#useful-approximations" title="Link to this heading">#</a></h2>
+<section id="small-angle-approximation">
+<h3>Small Angle Approximation<a class="headerlink" href="#small-angle-approximation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>$\sin\theta \approx \theta$ (for small $\theta$)</p></li>
+<li><p>$\cos\theta \approx 1 - \frac{\theta^2}{2}$ (for small $\theta$)</p></li>
+</ul>
+</section>
+<section id="taylor-series">
+<h3>Taylor Series<a class="headerlink" href="#taylor-series" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>$e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots$</p></li>
+<li><p>$\sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots$</p></li>
+<li><p>$\cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots$</p></li>
+</ul>
+</section>
+</section>
+<section id="interactive-examples">
+<h2>Interactive Examples<a class="headerlink" href="#interactive-examples" title="Link to this heading">#</a></h2>
+<p>Let’s explore some of these concepts with Python:</p>
+<p>This mathematical foundation will be essential for understanding the concepts presented throughout the signals and systems course.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-numbers">Complex Numbers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polar-form">Polar Form</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euler-s-formula">Euler’s Formula</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties">Properties</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculus">Calculus</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives">Derivatives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrals">Integrals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definite-integrals">Definite Integrals</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-algebra">Linear Algebra</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vectors">Vectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices">Matrices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvalues-and-eigenvectors">Eigenvalues and Eigenvectors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#series-and-summations">Series and Summations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-series">Geometric Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-series">Arithmetic Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-identities">Trigonometric Identities</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differential-equations">Differential Equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#first-order-linear">First-Order Linear</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-linear">Second-Order Linear</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fourier-series">Fourier Series</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-form">Trigonometric Form</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential-form">Exponential Form</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coefficients">Coefficients</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-and-statistics">Probability and Statistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-and-variance">Mean and Variance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-distribution">Gaussian Distribution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-approximations">Useful Approximations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#small-angle-approximation">Small Angle Approximation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-series">Taylor Series</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-examples">Interactive Examples</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Universidade Federal de Uberlândia
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
