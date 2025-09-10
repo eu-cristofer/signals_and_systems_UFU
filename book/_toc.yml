@@ -6,54 +6,63 @@ root: intro
 chapters:
 - file: intro
 - title: Chapter 1 - Introduction to Signals and Systems
+  file: chapters/01_introduction/01_signals
   sections:
   - file: chapters/01_introduction/01_signals
   - file: chapters/01_introduction/02_systems
   - file: chapters/01_introduction/03_classification
   - file: chapters/01_introduction/exercises
 - title: Chapter 2 - Time Domain Analysis
+  file: chapters/02_time_domain/01_continuous_time
   sections:
   - file: chapters/02_time_domain/01_continuous_time
   - file: chapters/02_time_domain/02_discrete_time
   - file: chapters/02_time_domain/03_convolution
   - file: chapters/02_time_domain/exercises
 - title: Chapter 3 - Frequency Domain Analysis
+  file: chapters/03_frequency_domain/01_fourier_series
   sections:
   - file: chapters/03_frequency_domain/01_fourier_series
   - file: chapters/03_frequency_domain/02_fourier_transform
   - file: chapters/03_frequency_domain/03_discrete_fourier_transform
   - file: chapters/03_frequency_domain/exercises
 - title: Chapter 4 - Laplace Transform
+  file: chapters/04_laplace/01_definition_properties
   sections:
   - file: chapters/04_laplace/01_definition_properties
   - file: chapters/04_laplace/02_inverse_laplace
   - file: chapters/04_laplace/03_system_analysis
   - file: chapters/04_laplace/exercises
 - title: Chapter 5 - Z-Transform
+  file: chapters/05_z_transform/01_definition_properties
   sections:
   - file: chapters/05_z_transform/01_definition_properties
   - file: chapters/05_z_transform/02_inverse_z_transform
   - file: chapters/05_z_transform/03_discrete_systems
   - file: chapters/05_z_transform/exercises
 - title: Chapter 6 - Sampling and Reconstruction
+  file: chapters/06_sampling/01_sampling_theorem
   sections:
   - file: chapters/06_sampling/01_sampling_theorem
   - file: chapters/06_sampling/02_aliasing
   - file: chapters/06_sampling/03_reconstruction
   - file: chapters/06_sampling/exercises
 - title: Chapter 7 - Filter Design
+  file: chapters/07_filters/01_analog_filters
   sections:
   - file: chapters/07_filters/01_analog_filters
   - file: chapters/07_filters/02_digital_filters
   - file: chapters/07_filters/03_fir_iir
   - file: chapters/07_filters/exercises
 - title: Chapter 8 - Applications
+  file: chapters/08_applications/01_communications
   sections:
   - file: chapters/08_applications/01_communications
   - file: chapters/08_applications/02_control_systems
   - file: chapters/08_applications/03_signal_processing
   - file: chapters/08_applications/exercises
 - title: Appendices
+  file: appendices/mathematical_review
   sections:
   - file: appendices/mathematical_review
   - file: appendices/matlab_python_examples
